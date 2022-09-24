@@ -7,11 +7,13 @@
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_button.xml" value="0.2515" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_buttonV2.xml" value="0.1505" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_button_v2.xml" value="0.1505" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_login_view.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_main.xml" value="0.26313405797101447" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail_seller_cart.xml" value="0.26313405797101447" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail_seller_products.xml" value="0.26313405797101447" />
-        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_wholesaler_orders.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_wholesaler_orders.xml" value="0.264" />
         <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_retail_seller_cart.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_wholesaler_orders.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
