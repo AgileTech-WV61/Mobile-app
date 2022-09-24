@@ -3,9 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/ic_outline_delete_24.xml" value="0.2515" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_button.xml" value="0.2515" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_buttonV2.xml" value="0.1505" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/drawable/round_button_v2.xml" value="0.1505" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_main.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail_seller_cart.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail_seller_products.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_wholesaler_orders.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_retail_seller_cart.xml" value="0.26313405797101447" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
