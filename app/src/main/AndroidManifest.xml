@@ -16,6 +16,11 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
+        </activity>
+        <activity
+            android:name=".RetailSellerPaymentActivity"
+            android:exported="false">
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
