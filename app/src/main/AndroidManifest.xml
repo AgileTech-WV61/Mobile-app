@@ -23,6 +23,12 @@
             android:name=".WholesalerProducts"
             android:exported="false" />
         <activity
+            android:name=".RetailSellerProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WholesalerOrdersActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
