@@ -11,6 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val btnToHome: Button = findViewById(R.id.toHomeButton)
+        btnToHome.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val btnToRegister: Button = findViewById(R.id.toRegisterButton)
         btnToRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
@@ -34,5 +41,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+
     }
 }
