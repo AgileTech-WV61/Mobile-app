@@ -43,5 +43,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        val btnToWholesalerProducts: Button = findViewById(R.id.toWholesalerProducts)
+        btnToWholesalerProducts.setOnClickListener {
+            val intent = Intent(this, WholesalerProducts::class.java)
+            startActivity(intent)
+        }
     }
 }
