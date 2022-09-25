@@ -18,7 +18,7 @@
             android:exported="false" />
         <activity
             android:name=".RetailSellerPaymentActivity"
-            android:exported="false">
+            android:exported="false"/>
         <activity
             android:name=".WholesalerProducts"
             android:exported="false" />
