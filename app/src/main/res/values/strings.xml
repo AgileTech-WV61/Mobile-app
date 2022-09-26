@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ksero</string>
+    <string name="text_style"><i>Hola, Alex!</i></string>
 </resources>
