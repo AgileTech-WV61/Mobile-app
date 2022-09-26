@@ -14,11 +14,17 @@
         android:theme="@style/Theme.Ksero"
         tools:targetApi="31">
         <activity
+            android:name=".EditProduct"
+            android:exported="false" />
+        <activity
+            android:name=".AddProduct"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RetailSellerPaymentActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".WholesalerProducts"
             android:exported="false" />

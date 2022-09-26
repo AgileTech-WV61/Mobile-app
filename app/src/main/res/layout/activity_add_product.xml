@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddProduct"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of Product"
+        android:textSize="12dp"
+        android:layout_margin="40dp"
+        android:id="@+id/txtAddProductName" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description of Product"
+        android:textSize="12dp"
+        android:layout_margin="40dp"
+        android:id="@+id/txtAddProductDescription" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price of Product"
+        android:textSize="12dp"
+        android:layout_margin="40dp"
+        android:id="@+id/txtAddProductPrice"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        android:layout_gravity="center"
+        android:textSize="12dp"
+        android:backgroundTint="#673ab7"
+        android:id="@+id/btnAddProduct"/>
+
+</LinearLayout>
