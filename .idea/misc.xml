@@ -3,9 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/drawable/ic_baseline_article_24.xml" value="0.2065" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/drawable/image_profile.xml" value="0.2555" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/drawable/round_button.xml" value="0.2555" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_login_view.xml" value="0.1" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_main.xml" value="0.10582010582010581" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_register_view.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_retail.xml" value="0.1" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_retail_seller_cart.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/activity_wholesaler.xml" value="0.1" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_products.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_retail_orders.xml" value="0.1" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_retail_products.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_retail_settings.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_wholesaler_orders.xml" value="0.2359375" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_wholesaler_products.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/layout/fragment_wholesaler_settings.xml" value="0.25" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/menu/bottom_menu_retail.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/hbcor/Desktop/Aplicaciones Moviles/Proyecto Final/Mobile-app/app/src/main/res/menu/botton_menu.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

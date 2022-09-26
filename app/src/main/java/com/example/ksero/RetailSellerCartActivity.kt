@@ -4,13 +4,15 @@ import Beans.CartOrder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class RetailSellerCartActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class RetailSellerCartActivity : Fragment(R.layout.activity_retail_seller_cart) {
+
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_retail_seller_cart)
+        // setContentView(R.layout.activity_retail_seller_cart)
 
         // change top bar title
         supportActionBar?.title = "Cart"
@@ -32,5 +34,5 @@ class RetailSellerCartActivity : AppCompatActivity() {
         val totalPrice = cartOrderList.sumOf { it.productPrice * it.productQuantity }
         payButton.text = "PAY $${totalPrice}"
 
-    }
+    }*/
 }
