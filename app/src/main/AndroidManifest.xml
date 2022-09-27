@@ -35,6 +35,12 @@
             android:name=".WholesalerOrdersActivity"
             android:exported="false" />
         <activity
+            android:name=".WholesalerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

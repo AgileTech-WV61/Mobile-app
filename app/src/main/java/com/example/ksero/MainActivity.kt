@@ -20,25 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         val btnToRegister: Button = findViewById(R.id.toRegisterButton)
         btnToRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-
-        val btnToCart: Button = findViewById(R.id.toCartButton)
-        btnToCart.setOnClickListener {
-            val intent = Intent(this, RetailSellerCartActivity::class.java)
-            startActivity(intent)
-        }
-
-        val btnToLogin: Button = findViewById(R.id.toLoginButton)
-        btnToLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        val btnToProfile: Button = findViewById(R.id.toProfileButton)
-        btnToProfile.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+        val btnToCart: Button = findViewById(R.id.btnRegister)
+        btnToCart.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
