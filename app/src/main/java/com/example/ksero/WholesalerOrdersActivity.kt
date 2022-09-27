@@ -30,5 +30,22 @@ class WholesalerOrdersActivity : AppCompatActivity() {
         val recycler = findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)
         recycler.layoutManager = LinearLayoutManager(applicationContext)
         recycler.adapter = AdapterWOrders(orders)
+
+        //Order Pending
+
+        val orderP1 = WOrders(35.00, 6, 210.00)
+        val orderP2 = WOrders(40.00, 7, 280.00)
+        val orderP3 = WOrders(25.00, 10, 250.00)
+
+        val ordersP = mutableListOf<WOrders>()
+
+        ordersP.add(orderP1)
+        ordersP.add(orderP2)
+        ordersP.add(orderP3)
+
+        val recyclerP = findViewById<RecyclerView>(R.id.recyclerViewCartPending)
+        recycler.layoutManager = LinearLayoutManager(applicationContext)
+        recycler.adapter = AdapterWOrders(orders)
+
     }
 }
