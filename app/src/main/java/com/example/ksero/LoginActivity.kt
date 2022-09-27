@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity() {
 
         val btnToRegister: Button = findViewById(R.id.loginButton)
         btnToRegister.setOnClickListener {
-            var userType = "wholesaler";
+            var userType = "retail";
             if (userType.toString().lowercase() == "wholesaler")
             {
                 val intent = Intent(this, WholesalerActivity::class.java)
