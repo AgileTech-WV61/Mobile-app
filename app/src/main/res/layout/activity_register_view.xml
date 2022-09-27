@@ -98,10 +98,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/registerRetailSellerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continue"
+        android:text="RetailSeller"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>
     <LinearLayout
@@ -153,5 +153,13 @@
             android:background="#000000"
             android:layout_gravity="center"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/registerWholesalerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wholesaler"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

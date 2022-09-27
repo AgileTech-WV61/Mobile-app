@@ -7,6 +7,7 @@ import Models.HttpRequest.Users.UserGet
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface PlaceholderUsers {
@@ -18,4 +19,10 @@ interface PlaceholderUsers {
 
     @POST("users/auth/sign-in")
     fun signIn(@Body user: SignInRequest): Call<SignInResponse>
+
+    @GET("users/auth/verify-token-retail-seller")
+    fun verifyTokenRetailSeller(@Header("Authorization") authHeader: String): Call<Boolean>
+
+    @GET("users/auth/verify-token-wholesaler")
+    fun verifyTokenWholesaler(@Header("Authorization") authHeader: String): Call<Boolean>
 }

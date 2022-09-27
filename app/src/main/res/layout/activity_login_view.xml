@@ -36,7 +36,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/loginUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -99,6 +99,7 @@
 
     <Button
         android:id="@+id/loginButton"
+        android:id="@+id/loginContinueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Continue"
