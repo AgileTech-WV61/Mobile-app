@@ -34,9 +34,13 @@ class RegisterActivity : AppCompatActivity() {
 
         usersService = retrofit.create(PlaceholderUsers::class.java)
 
-        val registerButton = findViewById<TextView>(R.id.registerButton)
-        registerButton.setOnClickListener {
-            register()
+        val registerRetailSellerButton = findViewById<TextView>(R.id.registerRetailSellerButton)
+        registerRetailSellerButton.setOnClickListener {
+            register(0)
+        }
+        val registerWholesalerButton = findViewById<TextView>(R.id.registerWholesalerButton)
+        registerWholesalerButton.setOnClickListener {
+            register(1)
         }
         val call = usersService.getUsers()
         call.enqueue(object : Callback<List<UserGet>> {
@@ -55,15 +59,17 @@ class RegisterActivity : AppCompatActivity() {
         })
     }
 
-    private fun register(){
+    private fun register(option: Int = 0) {
         val username = findViewById<TextView>(R.id.username)
         val password = findViewById<TextView>(R.id.password)
         println("username: ${username.text}")
         println("password: ${password.text}")
+        val role = if (option == 0) "ROLE_RETAIL_SELLER" else "ROLE_WHOLESALER"
         val call = usersService.signUp(
-            User(username.text.toString(),
+            User(
+                username.text.toString(),
             "${username.text}@test",
-            password.text.toString(), arrayOf("ROLE_RETAIL_SELLER"))
+            password.text.toString(), arrayOf(role))
         )
 
             call.enqueue(object : Callback<UserGet> {
