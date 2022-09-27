@@ -11,6 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val btnToRegister: Button = findViewById(R.id.btnRegister)
+        btnToRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+        val btnToLogin: Button = findViewById(R.id.btnLogin)
+        btnToLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        /*
         val btnToHome: Button = findViewById(R.id.toHomeButton)
         btnToHome.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -30,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         val btnToWholesalerProducts: Button = findViewById(R.id.toWholesalerProducts)
         btnToWholesalerProducts.setOnClickListener {
             val intent = Intent(this, WholesalerProducts::class.java)
@@ -46,6 +59,6 @@ class MainActivity : AppCompatActivity() {
         btnToWholesalerOrders.setOnClickListener {
             val intent = Intent(this, WholesalerOrdersActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }
