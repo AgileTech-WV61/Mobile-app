@@ -10,4 +10,5 @@ class WOrders {
         this.quantity = quantity
         this.total = total
     }
+
 }

@@ -4,6 +4,7 @@ import Beans.WOrders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ksero.wholesaler_orders.WOrderPendingViewHolder
 
 class AdapterWOrdersPending (val orderList: List<WOrders>): RecyclerView.Adapter<WOrderPendingViewHolder>() {
 
