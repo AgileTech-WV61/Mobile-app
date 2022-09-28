@@ -1,12 +1,13 @@
 package com.example.ksero.retailSeller_products
 
 import Beans.RProducts
+import Models.HttpRequest.Products.Product
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ksero.R
 
-class AdapterRProducts(private val productList: List<RProducts >): RecyclerView.Adapter<RProductsViewHolder>() {
+class AdapterRProducts(private val productList: List<Product>): RecyclerView.Adapter<RProductsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RProductsViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

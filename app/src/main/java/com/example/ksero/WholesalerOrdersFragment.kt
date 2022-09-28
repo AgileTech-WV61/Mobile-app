@@ -56,7 +56,7 @@ class WholesalerOrdersFragment : Fragment() {
 
         val recyclerP = view.findViewById<RecyclerView>(R.id.recyclerViewCartPending)
         recyclerP.layoutManager = LinearLayoutManager(context)
-        recyclerP.adapter = AdapterWOrdersPending(orders)
+        recyclerP.adapter = AdapterWOrdersPending(ordersP)
 
     }
 }
