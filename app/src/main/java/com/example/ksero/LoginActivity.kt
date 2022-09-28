@@ -5,15 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import Interface.HttpRequest.PlaceholderUsers
-import Interface.HttpRequest.PlaceholderUsers
 import Models.HttpRequest.Users.SignInRequest
 import Models.HttpRequest.Users.SignInResponse
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import retrofit2.Call
@@ -31,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_view)
 
-        val btnToRegister: Button = findViewById(R.id.loginButton)
+        /*val btnToRegister: Button = findViewById(R.id.loginButton)
         btnToRegister.setOnClickListener {
             var userType = "retail";
             if (userType.toString().lowercase() == "wholesaler")
@@ -42,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, RetailActivity::class.java)
                 startActivity(intent)
             }
+        }*/
         sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val retrofit = Retrofit.Builder()
             .baseUrl("https://ksero.herokuapp.com/api/v1/")
@@ -84,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
                         override fun onResponse(call: Call<Boolean>, response: Response<Boolean>) {
                             if (response.isSuccessful) {
                                 // go to retail seller view
-                                val intent = Intent(this@LoginActivity, RetailSellerCartActivity::class.java)
+                                val intent = Intent(this@LoginActivity, RetailActivity::class.java)
                                 startActivity(intent)
                             }
                         }
@@ -98,7 +94,7 @@ class LoginActivity : AppCompatActivity() {
                         override fun onResponse(call: Call<Boolean>, response: Response<Boolean>) {
                             if (response.isSuccessful) {
                                 // go to wholesaler view
-                                val intent = Intent(this@LoginActivity, Profile::class.java)
+                                val intent = Intent(this@LoginActivity, WholesalerActivity::class.java)
                                 startActivity(intent)
                             }
                         }

@@ -62,20 +62,21 @@ class RegisterActivity : AppCompatActivity() {
     private fun register(option: Int = 0) {
         val username = findViewById<TextView>(R.id.username)
         val password = findViewById<TextView>(R.id.password)
+        val email = findViewById<TextView>(R.id.email)
         println("username: ${username.text}")
         println("password: ${password.text}")
         val role = if (option == 0) "ROLE_RETAIL_SELLER" else "ROLE_WHOLESALER"
         val call = usersService.signUp(
             User(
                 username.text.toString(),
-            "${username.text}@test",
+            email.text.toString(),
             password.text.toString(), arrayOf(role))
         )
 
             call.enqueue(object : Callback<UserGet> {
             override fun onResponse(call: Call<UserGet>, response: Response<UserGet>) {
                 if (response.isSuccessful) {
-                    login(username.text.toString(), password.text.toString())
+                    login(username.text.toString(), password.text.toString(), option)
                 }
             }
 
@@ -85,7 +86,7 @@ class RegisterActivity : AppCompatActivity() {
         })
     }
 
-    private fun login(username: String, password: String){
+    private fun login(username: String, password: String, option: Int = 0){
         val call = usersService.signIn(
             SignInRequest(username,
                 password)
@@ -102,13 +103,13 @@ class RegisterActivity : AppCompatActivity() {
                         putString("token", token)
                     }.apply()
 
-                    // get token from shared preferences
-                    val t = sharedPreferences.getString("token", null)
-                    println("t: $t")
-
-
-                    val intent = Intent(this@RegisterActivity, Profile::class.java)
-                    startActivity(intent)
+                    if(option == 0) {
+                        val intent = Intent(this@RegisterActivity, RetailActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        val intent = Intent(this@RegisterActivity, WholesalerActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
 

@@ -10,17 +10,14 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // btnLogin
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
-        btnLogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+        val btnToRegister: Button = findViewById(R.id.btnRegister)
+        btnToRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-
-        // btnRegister
-        val btnRegister = findViewById<Button>(R.id.btnRegister)
-        btnRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+        val btnToLogin: Button = findViewById(R.id.btnLogin)
+        btnToLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
