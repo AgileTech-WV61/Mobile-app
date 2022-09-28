@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ksero.wholesaler_orders.AdapterWOrders
+import com.example.ksero.wholesaler_orders.AdapterWOrdersPending
 
 class WholesalerOrdersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

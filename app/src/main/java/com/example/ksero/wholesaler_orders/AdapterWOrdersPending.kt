@@ -1,10 +1,10 @@
-package com.example.ksero
+package com.example.ksero.wholesaler_orders
 
 import Beans.WOrders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ksero.wholesaler_orders.WOrderPendingViewHolder
+import com.example.ksero.R
 
 class AdapterWOrdersPending (val orderList: List<WOrders>): RecyclerView.Adapter<WOrderPendingViewHolder>() {
 

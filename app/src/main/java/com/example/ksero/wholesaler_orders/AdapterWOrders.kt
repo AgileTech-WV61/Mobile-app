@@ -1,12 +1,12 @@
-package com.example.ksero
+package com.example.ksero.wholesaler_orders
 
 import Beans.WOrders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ksero.wholesaler_orders.WOrderViewHolder
+import com.example.ksero.R
 
-class AdapterWOrders ( val orderList: List<WOrders>): RecyclerView.Adapter<WOrderViewHolder>() {
+class AdapterWOrders (val orderList: List<WOrders>): RecyclerView.Adapter<WOrderViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WOrderViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

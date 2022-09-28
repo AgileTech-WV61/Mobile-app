@@ -1,6 +1,6 @@
 package Beans
 
-class WOrders {
+class ROrders {
     var price: Double
     var quantity: Int
     var total: Double
