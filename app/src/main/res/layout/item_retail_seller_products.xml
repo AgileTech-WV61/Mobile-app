@@ -80,7 +80,7 @@
                     android:text="Brant: "
                     android:textSize="15dp"/>
                 <TextView
-                    android:id="@+id/textViewItemQuantityValue"
+                    android:id="@+id/textViewItemBrantValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -103,7 +103,7 @@
                     android:text="Description: "
                     android:textSize="15dp"/>
                 <TextView
-                    android:id="@+id/textViewItemTotalPriceValue"
+                    android:id="@+id/textViewItemDescriptionValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
