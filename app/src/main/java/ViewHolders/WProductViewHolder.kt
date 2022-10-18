@@ -1,11 +1,10 @@
 package ViewHolders
 
-import Beans.WProduct
+import Models.HttpRequest.Products.Product
 import android.content.Intent
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ksero.AddProduct
 import com.example.ksero.EditProduct
 import com.example.ksero.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,8 +17,8 @@ class WProductViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClic
     val price = view.findViewById<TextView>(R.id.txtPriceWholesalerProduct)
     lateinit var editBtn : FloatingActionButton
 
-    fun render(productModel: WProduct){
-        name.text = productModel.title
+    fun render(productModel: Product){
+        name.text = productModel.name
         description.text = productModel.description
         price.text = productModel.price.toString()
     }

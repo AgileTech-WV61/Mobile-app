@@ -1,6 +1,5 @@
 package com.example.ksero
 
-import Beans.WProduct
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,18 +24,18 @@ class EditProduct : AppCompatActivity() {
         price = findViewById(R.id.txtEditProductPrice)
         btn = findViewById(R.id.btnEditProduct)
 
-        val product = getProductById()
+        /*val product = getProductById()
 
         title.setText(product.title)
         description.setText(product.description)
-        price.setText(product.price.toString())
+        price.setText(product.price.toString())*/
 
         btn.setOnClickListener(View.OnClickListener {
-            verifyProduct()
+            //verifyProduct()
         })
     }
 
-    private fun getProductById(): WProduct {
+    /*private fun getProductById(): WProduct {
         val product1 = WProduct("Yougurt","100 Unidades de un 1L",250.00)
 
         return product1
@@ -67,5 +66,5 @@ class EditProduct : AppCompatActivity() {
 
         val intent = Intent(this, WholesalerProducts::class.java)
         startActivity(intent)
-    }
+    }*/
 }

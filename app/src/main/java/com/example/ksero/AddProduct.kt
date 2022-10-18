@@ -1,6 +1,5 @@
 package com.example.ksero
 
-import Beans.WProduct
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,13 +26,13 @@ class AddProduct : AppCompatActivity() {
 
         btn.setOnClickListener(View.OnClickListener {
 
-            verifyProduct()
+            //verifyProduct()
 
         })
 
     }
 
-    private fun verifyProduct(){
+   /* private fun verifyProduct(){
         if (title.text.isNotEmpty() and description.text.isNotEmpty() and price.text.isNotEmpty()){
 
             val product = WProduct(
@@ -60,5 +59,5 @@ class AddProduct : AppCompatActivity() {
         val intent = Intent(this, WholesalerProducts::class.java)
         startActivity(intent)
 
-    }
+    }*/
 }

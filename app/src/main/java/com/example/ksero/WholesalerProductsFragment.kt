@@ -1,8 +1,11 @@
 package com.example.ksero
 
 import Adapters.AdapterWProduct
-import Beans.WProduct
+import Interface.HttpRequest.PlaceholderProducts
+import Models.HttpRequest.Products.Product
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,11 +13,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ksero.retailSeller_products.AdapterRProducts
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class WholesalerProductsFragment : Fragment() {
 
     lateinit var btn : FloatingActionButton
+    lateinit var productsService: PlaceholderProducts
+    lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,32 +34,44 @@ class WholesalerProductsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getAllProducts(view)
+
+        sharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://ksero.herokuapp.com/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        productsService = retrofit.create(PlaceholderProducts::class.java)
+
+        getAllProductsByWhosalerId(view)
 
         btn = view.findViewById(R.id.btnGoToAddProduct)
 
         btn.setOnClickListener {
-            /*val intent = Intent(this, AddProduct::class.java)
-            startActivity(intent)*/
+            val intent = Intent(context, AddProduct::class.java)
+            startActivity(intent)
         }
     }
 
-    private fun getAllProducts(view: View){
-        val product1 = WProduct("Yougurt","100 Unidades de un 1L",250.00)
-        val product2 = WProduct("Coca Cola","100 Unidades de un 3L",700.00)
-        val product3 = WProduct("Galletas Vainilla","100 Unidades",90.00)
+    private fun getAllProductsByWhosalerId(view: View){
+        val token = sharedPreferences.getString("token", null)
+        val call = productsService.getProductsByWhosalerId("Bearer $token",2)
+        call.enqueue(object : retrofit2.Callback<List<Product>> {
+            override fun onResponse(
+                call: retrofit2.Call<List<Product>>,
+                response: retrofit2.Response<List<Product>>
+            ) {
+                if (response.isSuccessful) {
+                    val products = response.body()
+                    println(products)
+                    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerWProducts)
+                    recyclerView.layoutManager = LinearLayoutManager(context)
+                    recyclerView.adapter = AdapterWProduct(products!!)
+                }
+            }
 
-        val products = mutableListOf<WProduct>()
-
-        products.add(product1)
-        products.add(product2)
-        products.add(product3)
-        products.add(product1)
-        products.add(product2)
-        products.add(product3)
-
-        val recycler = view.findViewById<RecyclerView>(R.id.recyclerWProducts)
-        recycler.layoutManager = LinearLayoutManager(context)
-        recycler.adapter = AdapterWProduct(products)
+            override fun onFailure(call: retrofit2.Call<List<Product>>, t: Throwable) {
+                println(t.message)
+            }
+        })
     }
 }

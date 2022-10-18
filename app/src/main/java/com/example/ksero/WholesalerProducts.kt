@@ -1,13 +1,9 @@
 package com.example.ksero
 
 import Adapters.AdapterWProduct
-import Beans.WProduct
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.RelativeLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,7 +27,7 @@ class WholesalerProducts : AppCompatActivity() {
     }
 
     private fun getAllProducts(){
-        val product1 = WProduct("Yougurt","100 Unidades de un 1L",250.00)
+       /* val product1 = WProduct("Yougurt","100 Unidades de un 1L",250.00)
         val product2 = WProduct("Coca Cola","100 Unidades de un 3L",700.00)
         val product3 = WProduct("Galletas Vainilla","100 Unidades",90.00)
 
@@ -47,5 +43,6 @@ class WholesalerProducts : AppCompatActivity() {
         val recycler = findViewById<RecyclerView>(R.id.recyclerWProducts)
         recycler.layoutManager = LinearLayoutManager(applicationContext)
         recycler.adapter = AdapterWProduct(products)
+        */
     }
 }
