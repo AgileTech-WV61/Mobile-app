@@ -73,6 +73,10 @@ class LoginActivity : AppCompatActivity() {
                     editor.apply {
                         putString("token", token)
                     }.apply()
+                    editor.apply{
+                        putInt("id", response.body()?.id!!)
+                    }.apply()
+
 
                     // verify token
                     val callVerifyTokenRetailSeller = usersService.verifyTokenRetailSeller("Bearer $token")

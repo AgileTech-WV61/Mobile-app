@@ -54,7 +54,9 @@ class WholesalerProductsFragment : Fragment() {
 
     private fun getAllProductsByWhosalerId(view: View){
         val token = sharedPreferences.getString("token", null)
-        val call = productsService.getProductsByWhosalerId("Bearer $token",2)
+        val wholesalerId = sharedPreferences.getInt("id", 0)
+        println(wholesalerId)
+        val call = productsService.getProductsByWhosalerId("Bearer $token", wholesalerId)
         call.enqueue(object : retrofit2.Callback<List<Product>> {
             override fun onResponse(
                 call: retrofit2.Call<List<Product>>,

@@ -102,6 +102,9 @@ class RegisterActivity : AppCompatActivity() {
                     editor.apply {
                         putString("token", token)
                     }.apply()
+                    editor.apply{
+                        putInt("id", response.body()?.id!!)
+                    }.apply()
 
                     if(option == 0) {
                         val intent = Intent(this@RegisterActivity, RetailActivity::class.java)
