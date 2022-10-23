@@ -16,10 +16,12 @@
         tools:targetApi="31">
         <activity
             android:name=".EditProduct"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Ksero.NoActionBar"/>
         <activity
             android:name=".AddProduct"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Ksero.NoActionBar"/>
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
