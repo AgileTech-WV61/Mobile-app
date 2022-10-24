@@ -4,13 +4,18 @@ import Models.HttpRequest.Products.Product
 import android.content.Intent
 import android.view.View
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ksero.EditProduct
 import com.example.ksero.R
+import com.example.ksero.WholesalerSettingsFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class WProductViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener {
+class WProductViewHolder(view: View, fragmentManager: FragmentManager): RecyclerView.ViewHolder(view), View.OnClickListener {
 
+    val fragmentManager = fragmentManager
     val context = view.context
     val name = view.findViewById<TextView>(R.id.txtTitleWholesalerProduct)
     val description = view.findViewById<TextView>(R.id.txtDescriptionWholesalerProduct)
@@ -29,8 +34,15 @@ class WProductViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClic
     }
 
     override fun onClick(view: View?) {
-        val intent = Intent(context, EditProduct::class.java)
-        context.startActivity(intent)
+        val fragment: Fragment = EditProduct()
+        val fragmentManager: FragmentManager = this.fragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.containerView, fragment)
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit()
+
+        //val intent = Intent(context, EditProduct::class.java)
+        //context.startActivity(intent)
     }
 
 }

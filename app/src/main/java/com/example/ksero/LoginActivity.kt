@@ -99,6 +99,7 @@ class LoginActivity : AppCompatActivity() {
                             if (response.isSuccessful) {
                                 // go to wholesaler view
                                 val intent = Intent(this@LoginActivity, WholesalerActivity::class.java)
+                                intent.putExtra("userName", username);
                                 startActivity(intent)
                             }
                         }

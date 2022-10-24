@@ -6,41 +6,61 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".AddProduct"
-    android:orientation="vertical"
-    android:layout_gravity="center">
+    android:tag="WholesalerAddProduct"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo_ksero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
+        android:id="@+id/txtAddProductName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
         android:hint="Name of Product"
-        android:textSize="12dp"
-        android:layout_margin="40dp"
-        android:id="@+id/txtAddProductName" />
+        android:minHeight="48dp"
+        android:textSize="14dp" />
 
     <EditText
+        android:id="@+id/txtAddProductDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
         android:hint="Description of Product"
-        android:textSize="12dp"
-        android:layout_margin="40dp"
-        android:id="@+id/txtAddProductDescription" />
+        android:minHeight="48dp"
+        android:textSize="14dp" />
 
     <EditText
+        android:id="@+id/txtAddProductPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Price of Product"
-        android:textSize="12dp"
         android:layout_margin="40dp"
-        android:id="@+id/txtAddProductPrice"
-        android:inputType="numberDecimal"/>
+        android:hint="Price of Product"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="14dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Product"
-        android:layout_gravity="center"
+        android:layout_marginHorizontal="40dp"
         android:textSize="12dp"
         android:backgroundTint="#673ab7"
         android:id="@+id/btnAddProduct"/>
+
+
 
 </LinearLayout>
