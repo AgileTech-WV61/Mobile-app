@@ -16,9 +16,10 @@
         android:textSize="25dp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -35,7 +36,8 @@
         android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
