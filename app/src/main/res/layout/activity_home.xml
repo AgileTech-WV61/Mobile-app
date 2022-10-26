@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_marginHorizontal="40dp">
+    android:background="@drawable/fondo"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
@@ -18,31 +21,31 @@
             android:layout_height="128dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/logo_ksero"/>
+            android:src="@drawable/logo_ksero" />
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:id="@+id/btnLogin"
             android:text="Login" />
 
         <Button
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnRegister"
             android:text="Register" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="We make things easier !!"
             android:layout_gravity="center"
-            android:textStyle="italic"
-            android:textSize="20dp"
-            android:gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="35dp" />
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:text="We make things easier !!"
+            android:textSize="20dp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
