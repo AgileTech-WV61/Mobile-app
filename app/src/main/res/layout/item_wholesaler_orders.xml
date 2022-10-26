@@ -10,7 +10,6 @@
     android:layout_height="wrap_content"
     android:backgroundTint="#DEC7FD"
     android:layout_margin="25dp">
-    |
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,9 +34,10 @@
                 android:id="@+id/textViewItemNameValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="Orden #1"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
             <LinearLayout

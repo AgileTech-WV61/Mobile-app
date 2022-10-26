@@ -17,12 +17,13 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:src="@drawable/logo_ksero"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:id="@+id/btnLogin"
             android:text="Login" />
 
@@ -35,10 +36,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="We make things easier !!"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:textSize="17dp"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginBottom="35dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

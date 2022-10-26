@@ -13,28 +13,15 @@
         <entry key="..\:/Users/Kevin/Documents/GitHub/Aplicaciones Mobiles/mobile/Mobile-app/app/src/main/res/layout/activity_wholesaler_profile.xml" value="0.1859375" />
         <entry key="..\:/Users/Kevin/Documents/GitHub/Aplicaciones Mobiles/mobile/Mobile-app/app/src/main/res/layout/fragment_wholesaler_products.xml" value="0.15" />
         <entry key="..\:/Users/Kevin/Documents/GitHub/Aplicaciones Mobiles/mobile/Mobile-app/app/src/main/res/layout/item_wholesaler_product.xml" value="0.1" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/drawable/btn_box.xml" value="0.1195" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/drawable/custom_imput.xml" value="0.1" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1195" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_add_product.xml" value="0.2" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_edit_product.xml" value="0.176" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_home.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_login_view.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_register_view.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_retail_seller_cart.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_retail_seller_payment.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_retail_seller_products.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_wholesaler.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_wholesaler_orders.xml" value="0.10185185185185185" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/activity_wholesaler_products.xml" value="0.1" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/fragment_retail_products.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/fragment_retail_settings.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/fragment_wholesaler_orders.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/layout/fragment_wholesaler_products.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/hbcor/development/projects/Mobile-app/app/src/main/res/menu/bottom_menu_retail.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail.xml" value="0.14492753623188406" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_retail_seller_products.xml" value="0.14492753623188406" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/activity_wholesaler_orders.xml" value="0.176" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/fragment_retail_orders.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_retail_seller_cart.xml" value="0.264" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_retail_seller_products.xml" value="0.264" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_wholesaler_orders.xml" value="0.264" />
+        <entry key="..\:/Users/reate/OneDrive/Documentos/GitHub/Mobile-app/app/src/main/res/layout/item_wholesaler_product.xml" value="0.264" />
       </map>
     </option>
   </component>

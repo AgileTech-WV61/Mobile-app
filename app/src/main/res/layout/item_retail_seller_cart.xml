@@ -6,7 +6,7 @@
     app:cardCornerRadius="15dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="#E0CAFD"
+    android:backgroundTint="#DEC7FD"
     android:layout_margin="25dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:id="@+id/textViewItemImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_margin="7dp"
             android:text="Item Image"
             android:textSize="20dp"
             android:layout_gravity="center"/>
@@ -24,13 +24,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:layout_margin="15dp">
             <TextView
                 android:id="@+id/textViewItemNameValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Value"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -40,14 +41,17 @@
                     android:id="@+id/textViewItemPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
                     android:text="Price: $"
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
                 <TextView
                     android:id="@+id/textViewItemPriceValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="Value"
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -57,14 +61,17 @@
                     android:id="@+id/textViewItemQuantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
                     android:text="Quantity: "
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
                 <TextView
                     android:id="@+id/textViewItemQuantityValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="Value"
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,14 +81,17 @@
                     android:id="@+id/textViewItemTotalPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
                     android:text="Total: $"
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
                 <TextView
                     android:id="@+id/textViewItemTotalPriceValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:text="Value"
-                    android:textSize="20dp"/>
+                    android:textSize="16dp"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
