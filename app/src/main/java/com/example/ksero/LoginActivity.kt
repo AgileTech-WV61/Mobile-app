@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }*/
+
         sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val retrofit = Retrofit.Builder()
             .baseUrl("https://ksero.herokuapp.com/api/v1/")
