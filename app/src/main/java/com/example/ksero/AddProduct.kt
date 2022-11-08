@@ -1,13 +1,23 @@
 package com.example.ksero
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import Adapters.AdapterWProduct
+import Interface.HttpRequest.PlaceholderProducts
+import Models.HttpRequest.Products.Product
+import Models.HttpRequest.Users.User
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class AddProduct : Fragment() {
 
@@ -15,6 +25,9 @@ class AddProduct : Fragment() {
     lateinit var description : EditText
     lateinit var price : EditText
     lateinit var btn :Button
+    lateinit var sharedPreferences: SharedPreferences
+    lateinit var productsService: PlaceholderProducts
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,97 +45,69 @@ class AddProduct : Fragment() {
         price = view.findViewById(R.id.txtAddProductPrice)
         btn = view.findViewById(R.id.btnAddProduct)
 
+        sharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://ksero.herokuapp.com/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        productsService = retrofit.create(PlaceholderProducts::class.java)
+
         btn.setOnClickListener(View.OnClickListener {
-            // TODO: Here will be the logic
+            verifyProduct()
         })
     }
 
-   /* private fun verifyProduct(){
+    private fun verifyProduct(){
         if (title.text.isNotEmpty() and description.text.isNotEmpty() and price.text.isNotEmpty()){
 
-            val product = WProduct(
-                title.text.toString(),description.text.toString(),price.text.toString().toDouble())
+            val wholesalerId = sharedPreferences.getInt("id", 0)
+            val user = User(wholesalerId)
+            val product = Product(
+                title.text.toString(),description.text.toString(),user,price.text.toString().toDouble())
 
             saveProduct(product)
         }else{
             Toast.makeText(
-                applicationContext,
+                context,
                 "Debe llenar todos los campos",
                 Toast.LENGTH_LONG
             ).show()
         }
     }
 
-    private fun saveProduct(product: WProduct){
+    private fun saveProduct(product: Product){
 
-        Toast.makeText(
-            applicationContext,
-            "Added successful product:${product.toString()}",
-            Toast.LENGTH_LONG
-        ).show()
+        val token = sharedPreferences.getString("token", null)
 
-        val intent = Intent(this, WholesalerProducts::class.java)
-        startActivity(intent)
+        val call = productsService.createProducts("Bearer $token",product)
+        call.enqueue(object : retrofit2.Callback<Product> {
+            override fun onResponse(
+                call: retrofit2.Call<Product>,
+                response: retrofit2.Response<Product>
+            ) {
+                if (response.isSuccessful) {
+                    val product = response.body()
+                    Toast.makeText(
+                        context,
+                        "Added successful product:${product?.name}",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
 
-    }*/
-}
-
-/*
-class AddProduct : AppCompatActivity() {
-
-    lateinit var title : EditText
-    lateinit var description : EditText
-    lateinit var price : EditText
-    lateinit var btn :Button
-    lateinit var btnBack: ImageButton
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_product)
-
-        title = findViewById(R.id.txtAddProductName)
-        description = findViewById(R.id.txtAddProductDescription)
-        price = findViewById(R.id.txtAddProductPrice)
-        btn = findViewById(R.id.btnAddProduct)
-        btnBack = findViewById(R.id.btnBack)
-
-        btn.setOnClickListener(View.OnClickListener {
-            // TODO: Here will be the logic
+            override fun onFailure(call: retrofit2.Call<Product>, t: Throwable) {
+                println(t.message)
+            }
         })
 
-        btnBack.setOnClickListener(View.OnClickListener{
-            finish()
-        })
+
+
+        val fragment: Fragment = WholesalerProductsFragment()
+        val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.containerView, fragment)
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit()
 
     }
-
-   /* private fun verifyProduct(){
-        if (title.text.isNotEmpty() and description.text.isNotEmpty() and price.text.isNotEmpty()){
-
-            val product = WProduct(
-                title.text.toString(),description.text.toString(),price.text.toString().toDouble())
-
-            saveProduct(product)
-        }else{
-            Toast.makeText(
-                applicationContext,
-                "Debe llenar todos los campos",
-                Toast.LENGTH_LONG
-            ).show()
-        }
-    }
-
-    private fun saveProduct(product: WProduct){
-
-        Toast.makeText(
-            applicationContext,
-            "Added successful product:${product.toString()}",
-            Toast.LENGTH_LONG
-        ).show()
-
-        val intent = Intent(this, WholesalerProducts::class.java)
-        startActivity(intent)
-
-    }*/
 }
-*/

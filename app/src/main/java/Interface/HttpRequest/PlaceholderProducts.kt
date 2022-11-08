@@ -2,10 +2,7 @@ package Interface.HttpRequest
 
 import Models.HttpRequest.Products.Product
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Headers
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface PlaceholderProducts {
     @GET("products")
@@ -13,4 +10,7 @@ interface PlaceholderProducts {
 
     @GET("products/wholesalerId/{wholesalerId}")
     fun getProductsByWhosalerId(@Header("Authorization") authHeader: String, @Path("wholesalerId")wholesalerId: Int): Call<List<Product>>
+
+    @POST("products")
+    fun createProducts(@Header("Authorization") authHeader: String, @Body product: Product): Call<Product>
 }
