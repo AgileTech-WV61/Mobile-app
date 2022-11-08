@@ -119,7 +119,7 @@ class WholesalerOrdersFragment : Fragment() {
     private fun getAllAcceptedOrders(view: View) {
         val token = sharedPreferences.getString("token", null)
 
-        val call = ordersService.getWholesalerOrders("Bearer $token")
+        val call = ordersService.getRetailSellerOrders("Bearer $token")
         call.enqueue(object : retrofit2.Callback<List<Orders>> {
             override fun onResponse(
                 call: retrofit2.Call<List<Orders>>,

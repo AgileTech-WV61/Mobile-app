@@ -11,4 +11,7 @@ import retrofit2.http.Path
 interface PlaceholderOrders {
     @GET("wholesaler-orders")
     fun getWholesalerOrders(@Header("Authorization") authHeader: String): Call<List<Orders>>
+
+    @GET("retail-seller-orders")
+    fun getRetailSellerOrders(@Header("Authorization") authHeader: String): Call<List<Orders>>
 }
