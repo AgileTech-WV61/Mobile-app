@@ -32,7 +32,7 @@ class WholesalerOrdersActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(applicationContext)
         recycler.adapter = AdapterWOrders(orders)
 
-        //Order Pending
+        /*//Order Pending
 
         val orderP1 = WOrders(35.00, 6, 210.00)
         val orderP2 = WOrders(40.00, 7, 280.00)
@@ -46,7 +46,7 @@ class WholesalerOrdersActivity : AppCompatActivity() {
 
         val recyclerP = findViewById<RecyclerView>(R.id.recyclerViewCartPending)
         recyclerP.layoutManager = LinearLayoutManager(applicationContext)
-        recyclerP.adapter = AdapterWOrdersPending(orders)
+        recyclerP.adapter = AdapterWOrdersPending(orders)*/
 
     }
 }
