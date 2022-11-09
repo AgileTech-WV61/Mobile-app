@@ -90,9 +90,6 @@ class WholesalerProductsFragment : Fragment() {
             fragmentTransaction.replace(R.id.containerView, fragment)
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit()
-
-            //val intent = Intent(context, Profile::class.java)
-            //startActivity(intent)
         })
     }
 
