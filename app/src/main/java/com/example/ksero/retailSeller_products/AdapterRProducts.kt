@@ -17,6 +17,7 @@ class AdapterRProducts(private val productList: List<Product>): RecyclerView.Ada
     override fun onBindViewHolder(holder: RProductsViewHolder, position: Int) {
         var item = productList[position]
         holder.render(item)
+        holder.setOnClickListeners()
     }
 
     override fun getItemCount(): Int = productList.size
