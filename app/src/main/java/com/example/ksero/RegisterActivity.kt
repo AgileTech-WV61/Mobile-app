@@ -68,9 +68,10 @@ class RegisterActivity : AppCompatActivity() {
         val role = if (option == 0) "ROLE_RETAIL_SELLER" else "ROLE_WHOLESALER"
         val call = usersService.signUp(
             User(
+                0,
                 username.text.toString(),
-            email.text.toString(),
-            password.text.toString(), arrayOf(role))
+                email.text.toString(),
+                password.text.toString(), arrayOf(role))
         )
 
             call.enqueue(object : Callback<UserGet> {
