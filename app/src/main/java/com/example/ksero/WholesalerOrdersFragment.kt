@@ -83,7 +83,7 @@ class WholesalerOrdersFragment : Fragment() {
 
                     if (orders != null) {
                         for (order in orders) {
-                            val callProduct = productsService.getProductById("Bearer $token", order.productId)
+                            val callProduct = productsService.getProduct("Bearer $token", order.productId)
                             callProduct.enqueue(object : retrofit2.Callback<Product> {
                                 override fun onResponse(
                                     call: Call<Product>,
@@ -132,7 +132,7 @@ class WholesalerOrdersFragment : Fragment() {
 
                     if (orders != null) {
                         for (order in orders) {
-                            val callProduct = productsService.getProductById("Bearer $token", order.productId)
+                            val callProduct = productsService.getProduct("Bearer $token", order.productId)
                             callProduct.enqueue(object : retrofit2.Callback<Product> {
                                 override fun onResponse(
                                     call: Call<Product>,
