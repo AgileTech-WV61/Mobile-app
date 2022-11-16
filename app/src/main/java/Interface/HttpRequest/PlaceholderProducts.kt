@@ -11,6 +11,9 @@ interface PlaceholderProducts {
     @GET("products/{id}")
     fun getProduct(@Header("Authorization") authHeader: String, @Path("id") id: Int): Call<Product>
 
+    @DELETE("products/{id}")
+    fun deleteProduct(@Header("Authorization") authHeader: String, @Path("id") id: Int): Call<Void>
+
     @GET("products/wholesalerId/{wholesalerId}")
     fun getProductsByWhosalerId(@Header("Authorization") authHeader: String, @Path("wholesalerId")wholesalerId: Int): Call<List<Product>>
 
