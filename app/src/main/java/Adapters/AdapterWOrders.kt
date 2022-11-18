@@ -1,10 +1,11 @@
-package com.example.ksero
+package Adapters
 
 import Beans.WOrders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ksero.wholesaler_orders.WOrderViewHolder
+import ViewHolders.WOrderViewHolder
+import com.example.ksero.R
 
 class AdapterWOrders ( val orderList: List<WOrders>): RecyclerView.Adapter<WOrderViewHolder>() {
 

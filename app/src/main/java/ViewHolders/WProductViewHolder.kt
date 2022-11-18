@@ -35,6 +35,9 @@ class WProductViewHolder(view: View, fragmentManager: FragmentManager): Recycler
 
     fun initial(productModel: Product){
 
+        editBtn = this.itemView.findViewById(R.id.btnGoToEditProduct)
+        deleteBtn = this.itemView.findViewById(R.id.btnDeletedProduct)
+
         product = productModel
 
         sharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
@@ -53,8 +56,6 @@ class WProductViewHolder(view: View, fragmentManager: FragmentManager): Recycler
     }
 
     fun setOnClickListeners(){
-        editBtn = this.itemView.findViewById(R.id.btnGoToEditProduct)
-        deleteBtn = this.itemView.findViewById(R.id.btnDeletedProduct)
         editBtn.setOnClickListener(this)
         deleteBtn.setOnClickListener(this)
     }

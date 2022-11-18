@@ -1,5 +1,6 @@
 package com.example.ksero
 
+import Adapters.AdapterWOrders
 import Beans.WOrders
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +16,7 @@ class WholesalerOrdersActivity : AppCompatActivity() {
     }
 
     private fun getAllOrders(){
-        val order1 = WOrders(35.00, 6, 210.00)
+        /*val order1 = WOrders(35.00, 6, 210.00)
         val order2 = WOrders(40.00, 7, 280.00)
         val order3 = WOrders(25.00, 10, 250.00)
 
@@ -30,7 +31,7 @@ class WholesalerOrdersActivity : AppCompatActivity() {
 
         val recycler = findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)
         recycler.layoutManager = LinearLayoutManager(applicationContext)
-        recycler.adapter = AdapterWOrders(orders)
+        recycler.adapter = AdapterWOrders(orders)*/
 
         /*//Order Pending
 

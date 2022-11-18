@@ -1,4 +1,4 @@
-package com.example.ksero.wholesaler_orders
+package ViewHolders
 
 import Beans.WOrders
 import android.view.View
@@ -8,14 +8,16 @@ import com.example.ksero.R
 
 class WOrderViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
+    val id = view.findViewById<TextView>(R.id.textViewItemIdValue)
     val quantity = view.findViewById<TextView>(R.id.textViewItemQuantityValue)
     val total = view.findViewById<TextView>(R.id.textViewItemTotalPriceValue)
     val price = view.findViewById<TextView>(R.id.textViewItemPriceValue)
 
-    fun render(productModel: WOrders){
-        quantity.text = productModel.quantity.toString()
-        total.text = productModel.total.toString()
-        price.text = productModel.price.toString()
+    fun render(orderModel: WOrders){
+        id.text = orderModel.id.toString()
+        quantity.text = orderModel.quantity.toString()
+        total.text = orderModel.total.toString()
+        price.text = orderModel.price.toString()
     }
 
 }

@@ -3,10 +3,7 @@ package Interface.HttpRequest
 import Models.HttpRequest.Orders.Orders
 import Models.HttpRequest.Products.Product
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Headers
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface PlaceholderOrders {
     @GET("wholesaler-orders")
@@ -14,4 +11,10 @@ interface PlaceholderOrders {
 
     @GET("retail-seller-orders")
     fun getRetailSellerOrders(@Header("Authorization") authHeader: String): Call<List<Orders>>
+
+    @POST("retail-seller-orders")
+    fun createProducts(@Header("Authorization") authHeader: String, @Body orders: Orders): Call<Orders>
+
+    @DELETE("wholesaler-orders/{id}")
+    fun deleteProduct(@Header("Authorization") authHeader: String, @Path("id") id: Int): Call<Void>
 }
