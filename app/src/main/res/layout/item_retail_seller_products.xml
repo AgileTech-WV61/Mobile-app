@@ -21,11 +21,11 @@
             android:layout_width="123dp"
             android:layout_height="166dp"
             android:layout_gravity="center"
-            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="15dp"
-            android:src="@drawable/check"/>
+            android:src="@drawable/check" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/aceite"
-                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:text="Aceite"
+                android:textSize="30dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
             <LinearLayout
@@ -47,46 +47,46 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp">
+                android:layout_marginLeft="10dp">
                 <TextView
                     android:id="@+id/textViewItemPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/purple_500"
                     android:textStyle="bold"
-                    android:text="@string/price"
-                    android:textSize="15sp"/>
+                    android:text="Price: "
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/textViewItemPriceValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:text="@string/_13_c_u"
-                    android:textSize="15sp"/>
+                    android:text="$13 c/u"
+                    android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp">
+                android:layout_marginLeft="10dp">
                 <TextView
                     android:id="@+id/textViewItemTotalPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/purple_500"
                     android:textStyle="bold"
-                    android:text="@string/description"
-                    android:textSize="15sp"/>
+                    android:text="Description: "
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/textViewItemDescriptionValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:text="@string/caja_de_12_unidades"
-                    android:textSize="15sp"
+                    android:text="Caja de 12 unidades"
+                    android:textSize="15dp"
                     android:lines="2" />
             </LinearLayout>
 
@@ -94,12 +94,8 @@
                 android:id="@+id/btnAddToCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="170dp"
-                android:layout_height="45dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/add_to_the_car"
-                android:textSize="13sp"/>
+                android:text="Add to the Car"/>
 
         </LinearLayout>
 

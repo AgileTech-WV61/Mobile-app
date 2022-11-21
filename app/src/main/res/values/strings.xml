@@ -3,12 +3,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_style"><i>Hola, Alex!</i></string>
-    <string name="add_to_the_car">Add to the Car</string>
-    <string name="caja_de_12_unidades">Caja de 12 unidades</string>
-    <string name="description">Description:</string>
-    <string name="_13_c_u">$13 c/u</string>
-    <string name="price">Price:</string>
-    <string name="aceite">Aceite</string>
-    <string name="name">Name:</string>
 </resources>
 
