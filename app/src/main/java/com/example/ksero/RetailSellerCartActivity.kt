@@ -79,10 +79,6 @@ class RetailSellerCartActivity : Fragment() {
             for(i in 0..(sharedPreferences.getInt("shopping_cart" + "_size", 0))){
 
                 if(sharedPreferences.getInt("shopping_cart_id_$i", 0) != 0){
-                    println("quantity: "+sharedPreferences.getInt("shopping_cart_quantity_$i", 0))
-                    println("retailId: "+sharedPreferences.getInt("id", 0))
-                    println("productId: "+sharedPreferences.getInt("shopping_cart_id_$i", 0))
-
                     val callCreateWholesaler = ordersService.createWholesalerOrders(
                         "Bearer " + sharedPreferences.getString("token", null),
                         OrderPost(
@@ -94,7 +90,6 @@ class RetailSellerCartActivity : Fragment() {
 
                     callCreateWholesaler.enqueue(object: Callback<Orders>{
                         override fun onResponse(call: Call<Orders>, response: Response<Orders>) {
-                            println(response.body()?.id)
                             if (response.isSuccessful) {
                                 println(response);
 
