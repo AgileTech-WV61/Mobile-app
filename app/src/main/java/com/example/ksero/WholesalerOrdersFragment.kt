@@ -92,7 +92,7 @@ class WholesalerOrdersFragment : Fragment() {
                                     if (response2.isSuccessful) {
                                         val product = response2.body()
                                         if (product != null) {
-                                            ordersP.add(WOrders(product.price, order.quantity, product.price.toDouble() * order.quantity))
+                                            ordersP.add(WOrders(product.id, product.price, order.quantity, product.price.toDouble() * order.quantity))
                                             println(product.price)
                                         }
                                         val recycler = view.findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)
@@ -141,7 +141,7 @@ class WholesalerOrdersFragment : Fragment() {
                                     if (response2.isSuccessful) {
                                         val product = response2.body()
                                         if (product != null) {
-                                            ordersP.add(WOrders(product.price, order.quantity, product.price.toDouble() * order.quantity))
+                                            ordersP.add(WOrders(product.id, product.price, order.quantity, product.price.toDouble() * order.quantity))
                                             println(product.price)
                                         }
                                         val recycler = view.findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)

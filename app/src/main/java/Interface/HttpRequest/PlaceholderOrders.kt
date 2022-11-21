@@ -14,4 +14,10 @@ interface PlaceholderOrders {
 
     @GET("retail-seller-orders")
     fun getRetailSellerOrders(@Header("Authorization") authHeader: String): Call<List<Orders>>
+
+    @GET("wholesaler-orders/retailSellerId/{retailSellerId}")
+    fun getWholesalerOrdersForRetailSeller(@Header("Authorization") authHeader: String, @Path("retailSellerId")retailsellerId: Int): Call<List<Orders>>
+
+    @GET("retail-seller-orders/retailSellerId/{retailSellerId}")
+    fun getRetailSellerOrdersForRetailSeller(@Header("Authorization") authHeader: String, @Path("retailSellerId")retailsellerId: Int): Call<List<Orders>>
 }
