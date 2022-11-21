@@ -17,6 +17,7 @@ class AdapterWProduct( val productList: List<Product>, val fragmentManager: Frag
 
     override fun onBindViewHolder(holder: WProductViewHolder, position: Int) {
         var item = productList[position]
+        holder.initial(item)
         holder.render(item)
         holder.setOnClickListeners()
     }

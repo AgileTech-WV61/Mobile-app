@@ -1,5 +1,7 @@
 package com.example.ksero
 
+import Adapters.AdapterWOrders
+import Adapters.AdapterWOrdersPending
 import Beans.WOrders
 import Interface.HttpRequest.PlaceholderOrders
 import Interface.HttpRequest.PlaceholderProducts
@@ -76,44 +78,52 @@ class WholesalerOrdersFragment : Fragment() {
                 call: retrofit2.Call<List<Orders>>,
                 response: retrofit2.Response<List<Orders>>
             ) {
-
                 if (response.isSuccessful) {
-                    val ordersP = mutableListOf<WOrders>()
                     val orders = response.body()
-
                     if (orders != null) {
-                        for (order in orders) {
-                            val callProduct = productsService.getProduct("Bearer $token", order.productId)
-                            callProduct.enqueue(object : retrofit2.Callback<Product> {
-                                override fun onResponse(
-                                    call: Call<Product>,
-                                    response2: Response<Product>
-                                ) {
-                                    if (response2.isSuccessful) {
-                                        val product = response2.body()
-                                        if (product != null) {
-                                            ordersP.add(WOrders(product.id, product.price, order.quantity, product.price.toDouble() * order.quantity))
-                                            println(product.price)
-                                        }
-                                        val recycler = view.findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)
-                                        recycler.layoutManager = LinearLayoutManager(context)
-                                        recycler.adapter = AdapterWOrders(ordersP)
-                                    }
-                                }
-                                override fun onFailure(call: Call<Product>, t: Throwable) {
-                                    print(message = "error");
-                                }
-                            })
-                            //ordersP.add(WOrders(20.0, order.quantity, 40.0))
-                        }
+                        processPendingOrders(orders)
                     }
                 }
             }
-
             override fun onFailure(call: Call<List<Orders>>, t: Throwable) {
                 print(message = "error");
             }
         })
+    }
+
+    private  fun processPendingOrders(orders: List<Orders>){
+        val token = sharedPreferences.getString("token", null)
+        val ordersP = mutableListOf<WOrders>()
+        for (order in orders) {
+            val callProduct = productsService.getProduct("Bearer $token", order.productId)
+            callProduct.enqueue(object : retrofit2.Callback<Product> {
+                override fun onResponse(
+                    call: Call<Product>,
+                    response2: Response<Product>
+                ) {
+                    if (response2.isSuccessful) {
+                        val product = response2.body()
+                        if (product != null) {
+                            ordersP.add(
+                                WOrders(
+                                    order.id, product.price, order.quantity,
+                                    product.price.toDouble() * order.quantity,
+                                    order.retailSellerId,
+                                    order.productId
+                                ))
+
+                            println(product.price)
+                        }
+                        val recycler = view!!.findViewById<RecyclerView>(R.id.recyclerViewCartAccepted)
+                        recycler.layoutManager = LinearLayoutManager(context)
+                        recycler.adapter = AdapterWOrdersPending(ordersP, requireActivity().supportFragmentManager)
+                    }
+                }
+                override fun onFailure(call: Call<Product>, t: Throwable) {
+                    print(message = "error");
+                }
+            })
+        }
     }
 
     private fun getAllAcceptedOrders(view: View) {
@@ -153,7 +163,6 @@ class WholesalerOrdersFragment : Fragment() {
                                     print(message = "error");
                                 }
                             })
-                            //ordersP.add(WOrders(20.0, order.quantity, 40.0))
                         }
                     }
                 }

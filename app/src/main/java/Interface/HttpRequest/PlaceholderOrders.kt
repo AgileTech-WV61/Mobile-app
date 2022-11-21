@@ -24,4 +24,10 @@ interface PlaceholderOrders {
 
     @GET("retail-seller-orders/retailSellerId/{retailSellerId}")
     fun getRetailSellerOrdersForRetailSeller(@Header("Authorization") authHeader: String, @Path("retailSellerId")retailsellerId: Int): Call<List<Orders>>
+    
+    @POST("retail-seller-orders")
+    fun createProducts(@Header("Authorization") authHeader: String, @Body orders: Orders): Call<Orders>
+
+    @DELETE("wholesaler-orders/{id}")
+    fun deleteProduct(@Header("Authorization") authHeader: String, @Path("id") id: Int): Call<Void>
 }
