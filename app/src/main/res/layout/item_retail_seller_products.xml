@@ -8,7 +8,7 @@
     app:cardCornerRadius="20dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="#E0CAFD"
+    android:backgroundTint="#FFFFFF"
     android:layout_margin="25dp">
 
     <LinearLayout
@@ -18,10 +18,10 @@
 
         <ImageView
             android:id="@+id/textViewItemImage"
-            android:layout_width="123dp"
+            android:layout_width="100dp"
             android:layout_height="166dp"
             android:layout_gravity="center"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="15dp"
@@ -91,7 +91,7 @@
             </LinearLayout>
 
             <Button
-                android:layout_width="170dp"
+                android:layout_width="155dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
